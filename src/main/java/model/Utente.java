@@ -1,8 +1,6 @@
 package model;
 
-import java.util.ArrayList;
-
-public class Utente {
+public abstract class Utente {
     private String login;
     private String password;
 
@@ -11,7 +9,9 @@ public class Utente {
         this.password = password;
     }
 
-    public boolean login(String login, String password) {
-        return ( login.equals(this.login) && password.equals(this.password));
-    }
+    public String getLogin() { return login; }
+    public void setLogin(String login) { this.login = login; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 }
